@@ -1,4 +1,4 @@
-name: Build bin cadd
+name: Build bin caddy classic
 on:
   workflow_dispatch:
 jobs:
