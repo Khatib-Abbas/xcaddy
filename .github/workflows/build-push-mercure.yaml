@@ -1,4 +1,4 @@
-name: Build bin caddy classic
+name: Build bin caddy mercure
 on:
   workflow_dispatch:
 jobs:
