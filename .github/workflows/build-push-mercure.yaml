@@ -1,0 +1,29 @@
+name: Build bin caddy classic
+on:
+  workflow_dispatch:
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '>=1.22.4'
+      - run: |
+          export GOPROXY=direct
+          export GONOSUMDB="*"
+          curl -L https://github.com/caddyserver/xcaddy/releases/download/v0.4.2/xcaddy_0.4.2_linux_amd64.tar.gz -o "/tmp/xcaddy_0.4.2_linux_amd64.tar.gz"          
+          tar -xzf /tmp/xcaddy_0.4.2_linux_amd64.tar.gz -C /tmp
+          sudo mv /tmp/xcaddy /usr/bin/
+          sudo chmod +x /usr/bin/xcaddy
+          xcaddy build v2.8.4 \
+            --with github.com/firecow/caddy-elastic-encoder \
+            --with https://github.com/dunglas/mercure
+            --output /tmp/caddy
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mercure-artifact
+          path: /tmp/caddy
+          
