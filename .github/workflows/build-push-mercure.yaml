@@ -21,9 +21,9 @@ jobs:
           xcaddy build v2.8.4 \
             --with github.com/firecow/caddy-elastic-encoder \
             --with https://github.com/dunglas/mercure
-            --output /tmp/caddy
+            --output /tmp/caddy-mercure
       - uses: actions/upload-artifact@v4
         with:
           name: mercure-artifact
-          path: /tmp/caddy
+          path: /tmp/caddy-mercure
           
