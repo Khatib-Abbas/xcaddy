@@ -12,7 +12,7 @@ module.exports = {
       "enabled": true
     }
   ],
-  "schedule": ["before 5am on Monday"], // Vérifier les mises à jour chaque lundi matin avant 5h
+  "schedule": ["before 5am on Monday"],
   "labels": ["dependencies", "caddy"],
-  "assignees": ["@Khatib-Abbas"] // Remplacez par votre nom d'utilisateur GitHub
+  "assignees": ["@Khatib-Abbas"]
 };
