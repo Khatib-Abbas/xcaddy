@@ -1,11 +1,8 @@
 module.exports = {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:recommended"],
   "dockerfile": {
     "fileMatch": ["Dockerfile"],
-    "enabled": true,
-    "managers": ["dockerfile"]
+    "enabled": true
   },
   "packageRules": [
     {
