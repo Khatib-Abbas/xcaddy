@@ -1,7 +1,7 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   platform: "github",
-  repositories: ["Khatib-Abbas/xcaddy"],
+  repositories: ["github.com/Khatib-Abbas/xcaddy"],
   "packageRules": [
     {
       "matchPackageNames": ["java"],
