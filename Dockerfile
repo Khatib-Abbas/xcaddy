@@ -1,1 +1,1 @@
-From caddy:2.8.4 AS up_stream
+FROM caddy:2.8.2 AS up_stream
