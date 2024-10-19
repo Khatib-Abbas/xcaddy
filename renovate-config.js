@@ -1,4 +1,4 @@
-{
+module.exports = {
   "packageRules": [
     {
       "matchPackageNames": ["java"],
@@ -6,4 +6,4 @@
       "replacementVersion": "11"
     }
   ]
-}
+};
