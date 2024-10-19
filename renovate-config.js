@@ -1,9 +1,4 @@
 module.exports = {
-  "extends": ["config:recommended"],
-  "dockerfile": {
-    "fileMatch": ["Dockerfile"],
-    "enabled": true
-  },
   "packageRules": [
     {
       "matchDatasources": ["docker"],
@@ -11,8 +6,10 @@ module.exports = {
       "groupName": "Caddy Server updates",
       "enabled": true
     }
+    {
+      "matchPackageNames": ["java"],
+      "replacementName": "eclipse-temurin",
+      "replacementVersion": "11"
+    }
   ],
-  "schedule": ["before 5am on Monday"],
-  "labels": ["dependencies", "caddy"],
-  "assignees": ["@Khatib-Abbas"]
 };
