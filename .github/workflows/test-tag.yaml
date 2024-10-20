@@ -30,7 +30,9 @@ jobs:
           REPO_NAME=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
 
           # Tags pour le format spécifique
-          docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.2-oci8.3
+          docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.4-oci8.3.1
+          docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.8-oci8.3.1
+          docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.8-oci8.3.2
           docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.2-ubi9-caddy8.5.0-oci8.4
 
           # Tags Semver pour tester les mises à jour
