@@ -28,8 +28,8 @@ jobs:
       - name: Tag Docker image with various versions
         run: |
           # Convertir le nom du repository en minuscules
-          REPO_NAME=${{ github.repository_owner,, }}
-          
+          REPO_NAME=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+
           # Tags pour le format spécifique
           docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.2-oci8.3
           docker tag my-image:latest ghcr.io/$REPO_NAME/php:8.2-ubi9-caddy8.5.0-oci8.4
@@ -41,8 +41,8 @@ jobs:
       - name: Push Docker tags
         run: |
           # Convertir le nom du repository en minuscules
-          REPO_NAME=${{ github.repository_owner,, }}
-          
+          REPO_NAME=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+
           docker push ghcr.io/$REPO_NAME/php:8.1-ubi9-caddy8.4.2-oci8.3
           docker push ghcr.io/$REPO_NAME/php:8.2-ubi9-caddy8.5.0-oci8.4
 
