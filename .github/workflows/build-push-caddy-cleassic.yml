@@ -14,8 +14,8 @@ jobs:
       - run: |
           export GOPROXY=direct
           export GONOSUMDB="*"
-          curl -L https://github.com/caddyserver/xcaddy/releases/download/v0.4.2/xcaddy_0.4.2_linux_amd64.tar.gz -o "/tmp/xcaddy_0.4.2_linux_amd64.tar.gz"          
-          tar -xzf /tmp/xcaddy_0.4.2_linux_amd64.tar.gz -C /tmp
+          curl -L https://github.com/caddyserver/xcaddy/releases/download/v0.4.4/xcaddy_0.4.4_linux_amd64.tar.gz -o "/tmp/xcaddy_0.4.4_linux_amd64.tar.gz"          
+          tar -xzf /tmp/xcaddy_0.4.4_linux_amd64.tar.gz -C /tmp
           sudo mv /tmp/xcaddy /usr/bin/
           sudo chmod +x /usr/bin/xcaddy
           xcaddy build v2.9.1 \
