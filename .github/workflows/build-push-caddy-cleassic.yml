@@ -18,7 +18,7 @@ jobs:
           tar -xzf /tmp/xcaddy_0.4.2_linux_amd64.tar.gz -C /tmp
           sudo mv /tmp/xcaddy /usr/bin/
           sudo chmod +x /usr/bin/xcaddy
-          xcaddy build v2.8.4 \
+          xcaddy build v2.9.1 \
             --with github.com/firecow/caddy-elastic-encoder \
             --output /tmp/caddy
       - uses: actions/upload-artifact@v4
